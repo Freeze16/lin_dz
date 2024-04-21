@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+    <category>
+        <pattern>КТО ТЫ</pattern>
+        <template>Я бот-помощник компании ****. Чем могу быть полезен?</template>
+    </category>
+    <category>
+        <pattern>ЧТО ТЫ</pattern>
+        <template>
+            Я могу ответить на темы, касаемо продуктов и услуг, а так же могу
+            передать отзыв о нашей компании
+        </template>
+    </category>
+    <category>
+        <pattern>КТО ТЫ *</pattern>
+        <template>
+            <srai>КТО ТЫ</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>ЧТО ТЫ *</pattern>
+        <template>
+            <srai>ЧТО ТЫ</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>ПРОДУКТЫ ИЛИ УСЛУГИ</pattern>
+        <template>
+            Выбрана тема <set name="topic">ПРОДУКТЫ ИЛИ УСЛУГИ</set>. Что вас конкретно интересует?
+        </template>
+    </category>
+    <category>
+        <pattern>КАКИЕ ПРОДУКТЫ *</pattern>
+        <template>
+            <srai>ПРОДУКТЫ ИЛИ УСЛУГИ</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>КАКИЕ УСЛУГИ *</pattern>
+        <template>
+            <srai>ПРОДУКТЫ ИЛИ УСЛУГИ</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>ЧТО ВЫ ПРОДАЁТЕ</pattern>
+        <template>
+            <srai>ПРОДУКТЫ ИЛИ УСЛУГИ</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>ОСТАВИТЬ ОТЗЫВ</pattern>
+        <template>Выбрана тема <set name="topic">ОТЗЫВ</set>. Пожалуйста, напишите ваш отзыв о нас
+        </template>
+    </category>
+
+    <topic name="ПРОДУКТЫ ИЛИ УСЛУГИ">
+        <category>
+            <pattern>ЦЕНА</pattern>
+            <template>
+                <random>
+                    <li>1000$</li>
+                    <li>2000$</li>
+                    <li>5000$</li>
+                </random>
+            </template>
+        </category>
+        <category>
+            <pattern>СКОЛЬКО СТОИТ *</pattern>
+            <template>Цена
+                <star/>
+                составляет
+                <srai>ЦЕНА</srai>
+            </template>
+        </category>
+    </topic>
+
+    <topic name="ОТЗЫВ">
+        <category>
+            <pattern>*</pattern>
+            <template>Спасибо, ваш отзыв '<star />' записан</template>
+        </category>
+    </topic>
+</aiml>
+
