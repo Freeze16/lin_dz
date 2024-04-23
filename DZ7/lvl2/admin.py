@@ -1,8 +1,11 @@
 from aiogram import Bot, Dispatcher
 from bot import config
 
+from core.utils.commands import set_commands
+
 
 async def start_bot(bot: Bot):
+    await set_commands(bot)
     await bot.send_message(config.admin, 'Бот запущен!')
 
 
