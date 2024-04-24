@@ -11,6 +11,10 @@ async def set_commands(bot: Bot):
         BotCommand(
             command='example',
             description='Пример работы'
+        ),
+        BotCommand(
+            command='all',
+            description='Вывести все названия файлов'
         )
     ]
 

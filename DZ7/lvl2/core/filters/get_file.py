@@ -6,3 +6,7 @@ def get_file(file: str) -> str:
                  document.split('.')[-1] != 'jpg'}
 
     return documents[file]
+
+
+def get_all_files() -> list[str]:
+    return [''.join(document.split('.')[:-1]) for document in os.listdir('core/filters/files/')]

@@ -14,4 +14,4 @@ keyboard = ReplyKeyboardMarkup(keyboard=[
             text='Найти файл 💾'
         )
     ]
-])
+], resize_keyboard=True)
