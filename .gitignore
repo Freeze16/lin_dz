@@ -1,5 +1,4 @@
 .idea
-DZ1/.~lock.Без имени 1.ods#
 task2.py
 main.py
 DZ3/task2.odt
@@ -7,5 +6,6 @@ DZN
 .env
 .venv
 __pycache__
-DZ8
 ffmpeg
+misc
+Lin_graph
