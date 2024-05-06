@@ -4,4 +4,8 @@ task2.py
 main.py
 DZ3/task2.odt
 DZN
-DZ7/lvl2/.env
+.env
+.venv
+__pycache__
+DZ8
+ffmpeg

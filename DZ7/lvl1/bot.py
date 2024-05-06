@@ -4,7 +4,7 @@ import aiml
 class HelperBot:
     def __init__(self):
         self.kernel = aiml.Kernel()
-        self.kernel.learn('settings.xml')
+        self.kernel.learn('bot.xml')
         print("Чем могу быть полезен?")
 
     def start_bot(self):
