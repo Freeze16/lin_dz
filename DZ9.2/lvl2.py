@@ -17,14 +17,13 @@ def filter_text(txt: list[list[str]]) -> list[str]:
 
 def calculate_frequency(txt: list[str]) -> dict[str, float]:
     no_repeats = set(txt)
-    length = len(no_repeats)
-    frequency = {word: round((txt.count(word) / length) * 1000, 3) for word in txt}
+    frequency = {word: txt.count(word) for word in no_repeats}
 
     return frequency
 
 
 def create_csv_table(txt: list[str], fr: dict[str, float], name: str = 'statistic'):
-    table = [['Номер', 'Слово', 'Частота встречаемости']]
+    table = [['Номер', 'Слово', 'Встречаемость']]
     skip, count = [], 1
 
     for word in txt:

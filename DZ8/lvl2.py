@@ -95,6 +95,6 @@ if __name__ == '__main__':
     # with open('my_friends.txt', 'r') as file:
     #     file = file.readlines()
     #
-    # a = [i.split('/')[-1][2:-1] for i in file]
+    # a = [i.split('/')[-1.txt][2:-1.txt] for i in file]
     main()
     # print(main())
